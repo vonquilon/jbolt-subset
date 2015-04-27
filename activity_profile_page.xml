@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jbolt="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="@dimen/edit_profile_margin_bottom">
+
+            <ImageButton
+                android:layout_centerHorizontal="true"
+                android:id="@+id/profilePageImage"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:background="@color/white"/>
+
+            <com.syas.jbolt.views.FontTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/screen_padding"
+                android:background="#99FFFFFF"
+                android:textColor="@color/dark_grey"
+                jbolt:font="roboto_light"
+                android:id="@+id/userTextView" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin"
+                android:id="@+id/relationshipStatusContainer">
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading_weight_more"
+                    android:text="@string/relationship_status"
+                    android:id="@+id/relationshipStatusTextView"/>
+
+                <ImageView
+                    style="@style/red_lock" />
+            </LinearLayout>
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/big_heading"
+                android:text="@string/background_and_lifestyle" />
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin"
+                android:id="@+id/phoneNumberContainer">
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading_black_weight_more"
+                    android:layout_width="0dp"
+                    android:id="@+id/phoneNumberTextView" />
+
+                <ImageView
+                    style="@style/yellow_lock" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin"
+                android:id="@+id/cityStateZipContainer">
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading_black_weight_more"
+                    android:layout_width="0dp"
+                    android:id="@+id/cityStateZipTextView" />
+
+                <ImageView
+                    style="@style/red_lock" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin">
+
+                <ImageView
+                    style="@style/image_view_weight_less"
+                    android:id="@+id/maritalStatusImage"
+                    android:contentDescription="@string/marital_status_image" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading_weight_more"
+                    android:text="@string/marital_status"
+                    android:id="@+id/maritalStatusTextView" />
+            </LinearLayout>
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_with_bottom_margin"
+                android:id="@+id/attributesTextView" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/hometown_profile"
+                android:id="@+id/hometownTextView" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/languages_profile"
+                android:id="@+id/languagesTextView" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/want_to_move_to_israel"
+                android:id="@+id/moveToIsraelTextView"/>
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/image_view_weight_less"
+                        android:src="@drawable/children_profile_page"
+                        android:contentDescription="@string/have_children_image" />
+
+                    <com.syas.jbolt.views.FontTextView
+                        style="@style/small_heading_weight_more"
+                        android:text="@string/have_children"
+                        android:id="@+id/haveChildrenTextView" />
+                </LinearLayout>
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/how_many"
+                    android:id="@+id/howManyQuestionTextView" />
+            </LinearLayout>
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/additional_children"
+                android:id="@+id/additionalChildrenTextView"/>
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/political_orientation_profile"
+                android:id="@+id/politicalOrientationTextView"/>
+        </LinearLayout>
+
+        <View
+            style="@style/yellow_border" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/big_heading"
+                android:text="@string/education_and_profession" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_with_bottom_margin"
+                android:id="@+id/educationTextView" />
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin">
+
+                <ImageView
+                    style="@style/image_view_weight_less"
+                    android:src="@drawable/education_profile_page"
+                    android:contentDescription="@string/education_image" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading_weight_more"
+                    android:text="@string/degree"
+                    android:id="@+id/degreeTextView"/>
+            </LinearLayout>
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/jewish_education_profile"
+                android:id="@+id/jewishEducationTextView" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/profession_profile"
+                android:id="@+id/professionTextView" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/description"
+                android:id="@+id/descriptionTextView" />
+        </LinearLayout>
+
+        <View
+            style="@style/yellow_border" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/big_heading"
+                android:text="@string/religiosity" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_with_bottom_margin"
+                android:id="@+id/religiosityTextView" />
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin"
+                android:id="@+id/motherJewishContainer">
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading_weight_more"
+                    android:text="@string/jewish_mother_grand_mother"
+                    android:id="@+id/motherJewishTextView" />
+
+                <ImageView
+                    style="@style/red_lock" />
+            </LinearLayout>
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/baal_teshuva"
+                android:id="@+id/baalTeshuvaTextView" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/kosher"
+                android:id="@+id/kosherTextView" />
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin"
+                android:id="@+id/convertContainer">
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading_weight_more"
+                    android:text="@string/convert"
+                    android:id="@+id/convertTextView" />
+
+                <ImageView
+                    style="@style/red_lock" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin"
+                android:id="@+id/canMarryCohenContainer">
+
+                <ImageView
+                    style="@style/image_view_weight_less"
+                    android:src="@drawable/cohen_profile_page"
+                    android:contentDescription="@string/cohen_image" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading_weight_more"
+                    android:text="@string/can_marry_cohen"
+                    android:id="@+id/canMarryCohenTextView" />
+
+                <ImageView
+                    style="@style/red_lock" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_layout_horizontal_with_bottom_margin"
+                android:id="@+id/hairCoverAndDressContainer">
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/hair_covering_profile"
+                    android:id="@+id/hairCoverProfileTextView" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/dress_profile"
+                    android:id="@+id/dressProfileTextView" />
+            </LinearLayout>
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_with_bottom_margin"
+                android:text="@string/torah_profile"
+                android:id="@+id/frequencyOfTorahTextView" />
+        </LinearLayout>
+
+        <View
+            style="@style/yellow_border" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/big_heading"
+                android:textAllCaps="true"
+                android:text="@string/about_me" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black"
+                android:id="@+id/aboutMeTextView" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

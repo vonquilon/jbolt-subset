@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jbolt="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="70dp" android:id="@+id/verificationRowContainer">
+
+    <ImageView
+        style="@style/verification_item"
+        android:layout_marginLeft="0dp"
+        android:id="@+id/verificationProfileImage" />
+
+    <com.syas.jbolt.views.FontTextView
+        style="@style/verification_item"
+        android:layout_marginLeft="0dp"
+        jbolt:font="roboto_light"
+        android:textColor="@color/white"
+        android:background="@color/light_yellow"
+        android:textSize="@dimen/verification_text"
+        android:gravity="center"
+        android:id="@+id/verificationName" />
+
+    <ImageButton
+        style="@style/verification_item"
+        android:id="@+id/verificationJewish" />
+
+    <ImageButton
+        style="@style/verification_item"
+        android:id="@+id/verificationSingle" />
+
+    <Spinner
+        style="@style/verification_item"
+        android:spinnerMode="dialog"
+        android:background="@color/full_transparent_black"
+        android:id="@+id/verificationObservance" />
+
+</LinearLayout>

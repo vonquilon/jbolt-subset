@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/light_yellow"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/matchmaker_menu_matches"
+        style="@style/menu_button"
+        android:drawableLeft="@drawable/menu_button_perfect_match"
+        android:text="@string/matches"/>
+    <Button
+        android:id="@+id/matchmaker_menu_share"
+        style="@style/menu_button"
+        android:drawableLeft="@drawable/menu_button_share"
+        android:text="@string/menu_share"/>
+    <Button
+        android:id="@+id/matchmaker_menu_verify"
+        style="@style/menu_button"
+        android:drawableLeft="@drawable/menu_button_verify"
+        android:text="@string/menu_verify"/>
+    <Button
+        android:id="@+id/matchmaker_menu_faq"
+        style="@style/menu_button"
+        android:drawableLeft="@drawable/menu_button_faq"
+        android:text="@string/menu_faq"/>
+
+    <Button
+        android:id="@+id/matchMakerlogOut"
+        style="@style/menu_button"
+        android:drawableLeft="@drawable/menu_button_settings"
+        android:text="@string/log_out" />
+</LinearLayout>

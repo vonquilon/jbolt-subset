@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slider="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/medium_grey">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.syas.jbolt.views.FontTextView
+            style="@style/top_heading_grey"
+            android:text="@string/discovery_info" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/discovery" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/discoverySwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/big_vertical_space" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/show_fb_friends"
+                android:layout_weight="2"/>
+
+            <Switch
+                style="@style/weight_less"
+                android:layout_width="fill_parent"
+                android:layout_weight="3"
+                android:id="@+id/showFBSwitch"/>
+        </LinearLayout>
+
+        <com.syas.jbolt.views.FontTextView
+            style="@style/small_heading_grey"
+            android:text="@string/dating_status"
+            android:padding="10dp" />
+
+        <Spinner
+            style="@style/spinner"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/datingStatusSpinner" />
+
+        <View
+            style="@style/big_vertical_space" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/distance" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_less"
+                android:text="@string/initial_distance"
+                android:id="@+id/distanceTextView" />
+        </LinearLayout>
+
+        <SeekBar
+            android:layout_marginBottom="@dimen/screen_padding"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="15dp"
+            android:thumb="@drawable/yellow_scrubber_control"
+            android:progressDrawable="@drawable/yellow_scrubber_progress"
+            android:id="@+id/distanceSeekBar"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:layout_marginLeft="10dp"
+                android:text="@string/age" />
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_less"
+                android:text="@string/initial_age_range"
+                android:id="@+id/ageTextView" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <com.syas.jbolt.views.DoubleSlider
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                slider:minValue="18"
+                slider:maxValue="99"
+                slider:left_color="@color/login_background"
+                slider:right_color="@color/login_background"
+                slider:radius="17dp"
+                android:id="@+id/ageSlider" />
+        </RelativeLayout>
+
+        <com.syas.jbolt.views.FontTextView
+            style="@style/small_heading_grey"
+            android:text="@string/religiosity"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/yeshivishContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/yeshivish" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/yeshivishSwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/border" />
+
+        <LinearLayout
+            android:id="@+id/orthodoxContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/orthodox" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/orthodoxSwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/border" />
+
+        <LinearLayout
+            android:id="@+id/conservativeContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/conservative" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/conservativeSwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/border" />
+
+        <LinearLayout
+            android:id="@+id/traditionalContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/traditional" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/traditionalSwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/border" />
+
+        <LinearLayout
+            android:id="@+id/reformContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/reform" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/reformSwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/border" />
+
+        <LinearLayout
+            android:id="@+id/justJewishContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/just_jewish" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/justJewishSwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/border" />
+
+        <LinearLayout
+            android:id="@+id/willingToConvertContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/willing_to_convert" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/convertSwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/border" />
+        <View
+            style="@style/big_vertical_space" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading_black_weight_more"
+                android:text="@string/event_mode" />
+
+            <Switch
+                style="@style/weight_less"
+                android:id="@+id/eventModeSwitch" />
+        </LinearLayout>
+
+        <View
+            style="@style/small_vertical_space" />
+    </LinearLayout>
+</ScrollView>

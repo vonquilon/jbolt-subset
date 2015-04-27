@@ -1,0 +1,386 @@
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" tools:context=".EditProfileActivity">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.syas.jbolt.views.FontTextView
+                style="@style/top_heading"
+                android:text="@string/edit_profile_page_top_info"
+                android:id="@+id/topTextView" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/screen_padding">
+
+                <RelativeLayout
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginBottom="@dimen/edit_profile_margin_bottom">
+
+                    <ImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/profile_image"/>
+
+                    <Button
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="32dp"
+                        android:background="#AA888888"
+                        android:text="@string/edit_button"
+                        android:id="@+id/editButton" />
+                </RelativeLayout>
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/big_heading"
+                    android:text="@string/background_and_lifestyle" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/cell" />
+
+                <EditText
+                    style="@style/number_edit_text"
+                    android:maxLength="11"
+                    android:id="@+id/cellPhoneEditText" />
+
+                <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading"
+                android:text="@string/hometown" />
+
+                <EditText
+                style="@style/text_edit_text"
+                android:id="@+id/hometownEditText" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/city" />
+
+                <EditText
+                    style="@style/text_edit_text"
+                    android:id="@+id/cityEditText" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/state" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/stateSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/zip" />
+
+                <EditText
+                    style="@style/number_edit_text"
+                    android:maxLength="5"
+                    android:id="@+id/zipEditText" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/languages" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/edit_profile_margin_bottom">
+
+                    <HorizontalScrollView
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:paddingRight="10dp"
+                        android:scrollbars="none">
+
+                        <com.syas.jbolt.views.FontTextView
+                            style="@style/holder_text_view"
+
+                            android:id="@+id/languagesHolderTextView" />
+                    </HorizontalScrollView>
+
+                    <ImageButton
+                        style="@style/add_button"
+                        android:contentDescription="@string/add_languages_button"
+                        android:id="@+id/addLanguagesButton" />
+                </LinearLayout>
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/height" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/heightSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/body_type" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/bodyTypeSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/smoking_habits" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/smokingHabitsSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/move_to_israel" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/israelSpinner" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/edit_profile_margin_bottom"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.syas.jbolt.views.FontTextView
+                            style="@style/small_heading"
+                            android:text="@string/have_children" />
+
+                        <Spinner
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/haveChildrenSpinner" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:id="@+id/howManyContainer">
+
+                        <com.syas.jbolt.views.FontTextView
+                            style="@style/small_heading"
+                            android:text="@string/how_many" />
+
+                        <Spinner
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/howManySpinner" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/additional_children" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/additionalChildrenSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/political_orientation" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/politicalSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/big_heading"
+                    android:text="@string/education_and_profession" />
+
+                <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading"
+                android:text="@string/highschool_name" />
+
+                <EditText
+                style="@style/text_edit_text"
+                android:id="@+id/highSchoolEditText" />
+
+                <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading"
+                android:text="@string/college_and_graduate_schools" />
+
+                <EditText
+                style="@style/text_edit_text"
+                android:id="@+id/collegeEditText" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/education_level" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/educationLevelSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/jewish_education" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/jewishEducationSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/profession" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/professionSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/job_description" />
+
+                <EditText
+                    style="@style/text_edit_text"
+                    android:id="@+id/jobDescriptionEditText" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/big_heading"
+                    android:text="@string/religiosity" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/religious_orientation" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/religionSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading"
+                android:text="@string/jewish_mother_grand_mother"
+                android:id="@+id/motherGrandMotherTextView" />
+
+                <Spinner
+                style="@style/spinner"
+                android:id="@+id/motherJewishSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading"
+                android:text="@string/am_i_cohen"
+                android:visibility="gone"
+                android:id="@+id/amICohenTextView" />
+
+                <Spinner
+                style="@style/spinner"
+                android:visibility="gone"
+                android:id="@+id/amICohenSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading"
+                android:text="@string/am_i_baal_teshuva"
+                android:id="@+id/amIBaalTeshuvaTextView" />
+
+                <Spinner
+                style="@style/spinner"
+                android:id="@+id/baalTeshuvaSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/cultural_background" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/cultureSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/ethnicity" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/ethnicitySpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading"
+                android:text="@string/kosher" />
+
+                <Spinner
+                style="@style/spinner"
+                android:id="@+id/kosherSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/am_i_convert"
+                    android:id="@+id/amIConvertTextView" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:id="@+id/convertSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                style="@style/small_heading"
+                android:text="@string/can_marry_cohen"
+                android:visibility="gone"
+                    android:id="@+id/marryCohenTextView" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:visibility="gone"
+                    android:id="@+id/marryCohenSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/hair_covering"
+                    android:visibility="gone"
+                    android:id="@+id/hairCoverTextView" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:visibility="gone"
+                    android:id="@+id/hairCoverSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/dress"
+                    android:visibility="gone"
+                    android:id="@+id/dressTextView" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:visibility="gone"
+                    android:id="@+id/dressSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/torah_study"
+                    android:visibility="gone"
+                    android:id="@+id/torahTextView" />
+
+                <Spinner
+                    style="@style/spinner"
+                    android:visibility="gone"
+                    android:id="@+id/torahSpinner" />
+
+                <com.syas.jbolt.views.FontTextView
+                    style="@style/small_heading"
+                    android:text="@string/about_me" />
+
+                <EditText
+                    style="@style/multiline_edit_text"
+                    android:id="@+id/aboutEditText" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>

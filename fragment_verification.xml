@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jbolt="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/verifyProgress" />
+
+    <com.syas.jbolt.views.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        jbolt:font="roboto_regular"
+        android:textSize="@dimen/edit_profile_big_heading"
+        android:textColor="@color/dark_grey"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/no_people_to_verify"
+        android:visibility="gone"
+        android:id="@+id/noPeopleTextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/light_yellow"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:id="@+id/titleContainer">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white"/>
+
+        <com.syas.jbolt.views.FontTextView
+            style="@style/verification_title"
+            android:text="@string/jewish" />
+
+        <com.syas.jbolt.views.FontTextView
+            style="@style/verification_title"
+            android:text="@string/single" />
+
+        <com.syas.jbolt.views.FontTextView
+            style="@style/verification_title"
+            android:text="@string/observance" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:layout_below="@id/titleContainer"
+        android:visibility="gone"
+        android:id="@+id/listview" />
+</RelativeLayout>

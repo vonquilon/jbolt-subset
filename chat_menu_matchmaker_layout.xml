@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="325dp"
+    android:background="@color/light_yellow"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ViewFlipper
+            android:id="@+id/matchMakerFlipper"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:text="@string/matches"
+                android:textSize="20sp"/>
+            <EditText
+                android:hint="@string/chat_menu_search_hint"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/matchMakerSearchBar"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:fontFamily="sans-serif-light"
+                android:textSize="17sp"/>
+        </ViewFlipper>
+        <ImageButton
+            android:id="@+id/matchMakerSearchButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/search"
+            />
+
+    </RelativeLayout>
+
+    <com.syas.jbolt.views.CustomViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:id="@+id/matchMakerPager">
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:textColor="@color/black" />
+    </com.syas.jbolt.views.CustomViewPager>
+</LinearLayout>
